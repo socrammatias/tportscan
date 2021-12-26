@@ -5,7 +5,7 @@ qtd = (int(input('Quantity of ports you want test: ')))
 portas = []
 ip = (socket.gethostbyname(site))
 dominio = (socket.gethostbyaddr(ip))
-dominio = dominio.split()[0] ## arrumar isso
+dominio = dominio[0] 
 for x in range(qtd):
     portas.append(int(input('Port: ')))
 for porta in portas:
@@ -13,8 +13,8 @@ for porta in portas:
     cliente.settimeout(0.5)
     codigo = cliente.connect_ex((site, porta))
     if codigo == 0:
-        print('\033[92m','[*]','\033[0m',ip, dominio,porta, 'OPEN') 
+        print('\033[92m','[*]','\033[0m',ip, ',',dominio,',',porta, 'OPEN') 
     else:
-        print('\033[91m','[*]','\033[0m',ip, dominio,porta, 'CLOSED') 
+        print('\033[91m','[*]','\033[0m',ip, ',',dominio,',',porta, 'CLOSED') 
 
-input()
+input('Press anything to close.')
