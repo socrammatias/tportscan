@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import socket
 
-site = input('Write the url or ip address: ')
+site = input('Put the url or ip address: ')
 qtd = (int(input('Quantity of ports you want test: ')))
 portas = []
 ip = (socket.gethostbyname(site))
