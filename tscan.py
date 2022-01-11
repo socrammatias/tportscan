@@ -1,11 +1,11 @@
 import socket
 
-site = input('Write the Url or Ip Address: ')
+site = input('Write the url or ip address: ')
 qtd = (int(input('Quantity of ports you want test: ')))
 portas = []
 ip = (socket.gethostbyname(site))
-dominio = (socket.gethostbyaddr(ip))
-dominio = dominio[0] 
+domain = (socket.gethostbyaddr(ip))
+domain = domain[0] 
 for x in range(qtd):
     portas.append(int(input('Port: ')))
 for porta in portas:
@@ -13,8 +13,8 @@ for porta in portas:
     cliente.settimeout(0.5)
     codigo = cliente.connect_ex((site, porta))
     if codigo == 0:
-        print('\033[92m','[*]','\033[0m',ip, ',',dominio,',',porta, 'OPEN') 
+        print('[*]',ip, ',',domain,',',porta, 'OPEN') 
     else:
-        print('\033[91m','[*]','\033[0m',ip, ',',dominio,',',porta, 'CLOSED') 
+        print('[*]',ip, ',',domain,',',porta, 'CLOSED') 
 
 input('Press anything to close.')
