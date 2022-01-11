@@ -1,3 +1,8 @@
-# TCP Port Scanner em Python 
+# TCP Port Scanner 
 
-Port Scanner simples e bem intuitivo de se usar, preciso fazer algumas melhorias nele.
+Simple port scan project 
+# Prerequisites
+ + Python >> 3.8
+
+<h3>Clone</h3>
+<pre>git clone https://github.com/tarkerin/tportscan.git</pre>
